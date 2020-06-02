@@ -2,6 +2,11 @@
   "name": "conventional-changelog-firefanda",
   "version": "0.0.0",
   "description": "Conventional changelog preset",
+  "files": [
+    "lib",
+    "templates",
+    "types"
+  ],
   "main": "lib/index.js",
   "license": "MIT",
   "author": "firefanda (https://github.com/firefanda)",
