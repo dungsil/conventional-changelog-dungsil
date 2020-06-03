@@ -1,10 +1,12 @@
 const { resolve } = require('path')
 
 module.exports = {
-  entry: resolve(__dirname, 'src', 'index.spec.ts'),
+  mode: 'production',
+  target: 'node',
+  entry: resolve(__dirname, 'src', 'index.ts'),
   output: {
     path: resolve(__dirname, 'lib'),
-    filename: '[name].js'
+    filename: 'index.js',
   },
   resolve: {
     extensions: ['.ts', '.json']
