@@ -9,13 +9,18 @@
   "main": "lib/index.js",
   "license": "MIT",
   "author": "firefanda (https://github.com/firefanda)",
+  "publishConfig": {
+    "tag": "latest"
+  },
   "scripts": {
     "test": "jest",
-    "build": "webpack"
+    "build": "webpack",
+    "release": "semantic-release"
   },
   "dependencies": {
     "consola": "^2.12.2",
-    "deepmerge": "^4.2.2"
+    "deepmerge": "^4.2.2",
+    "semantic-release": "^17.0.8"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
