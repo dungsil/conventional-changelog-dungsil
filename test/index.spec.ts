@@ -12,7 +12,6 @@ import './fixtures/git-dummy-commit'
 it('테스트', (done: Function) => {
   preParing(1)
 
-  log.info("-- 프리셋 추가 --")
   const config = makePreset()
 
   cc({ config })
