@@ -64,7 +64,7 @@ interface ConventionalWriterOptions {
   commitGroupSort: (prev: Record<string, string>, next: Record<string, string>) => number,
   commitsSort: string[]
   noteGroupsSort: string,
-  notesSort: Function,
+  notesSort: string,
   mainTemplate: string,
   headerPartial: string,
   commitPartial: string,

@@ -1,5 +1,4 @@
 import merge from 'deepmerge'
-import compare from 'compare-func'
 import { resolve } from 'path'
 import { readFileSync } from 'fs'
 
@@ -47,7 +46,7 @@ export default function (userConfig: ConventionalConfigurationSpec): Conventiona
     groupBy: 'type',
     noteGroupsSort: 'title',
     commitsSort: ['scope', 'subject'],
-    notesSort: compare,
+    notesSort: 'text',
     commitGroupSort: (prev, next) => {
       const sections = config.types!!.map((type) => type.section).reverse()
       const rankPrev = sections.indexOf(prev.title)
