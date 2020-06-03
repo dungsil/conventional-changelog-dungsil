@@ -1,5 +1,6 @@
 // @ts-ignore
 import commit from 'git-dummy-commit'
+import log from 'consola'
 
 // @ts-ignore
 import shell from 'shelljs'
@@ -12,6 +13,7 @@ export const preParing = btb.preparing
 
 btb.setups([
   function () {
+    log.info("-- db 생성 --")
     // 테스트용 git db 생성
     shell.config.resetForTesting()
     shell.cd(__dirname)
@@ -21,6 +23,7 @@ btb.setups([
     shell.mkdir('git-templates')
     shell.exec('git init --template=./git-templates')
 
+    log.info("-- 커밋추가 --")
     commit(['chore: initial commit'])
     commit(['feat(api): 신규 API 추가'])
     commit(['feat(api): API 변경', 'BREAKING CHANGE: API 변경'])
